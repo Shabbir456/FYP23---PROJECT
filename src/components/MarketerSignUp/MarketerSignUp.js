@@ -40,6 +40,7 @@ const MarketerSignUp = () => {
 
     console.log(errors);
 
+    //IT IS USED TO MAP PASSWORD ACCURACY
     const pwd = watch('password');
 
     const EMAIL_REGEX = /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -71,7 +72,9 @@ const MarketerSignUp = () => {
         //     }
         //  })
         //!! ----------------- REALTIME DATABSE CODE ----------------!!
-
+        
+        
+        // DATA IS SENT TO USERSIGN TO GET REGISTRY
         UserSign(data.email, data.password, data.username)
             .then((res) => {
 
