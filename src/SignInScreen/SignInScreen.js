@@ -54,7 +54,7 @@ const SignInScreen = () => {
     const onSignInPressed =  (data) => {
 
 
-
+        // Passing value to Firebase Auth To Verify its Credentials
         signInWithEmailAndPassword(auth, data.email, data.password)
             .then((userCredential) => {
                 const user = getAuth()
@@ -143,7 +143,7 @@ const SignInScreen = () => {
 
 
 
-
+                //IMPORTING CUSTOM INPUT TO MAKE RESUEABLITY OF CODE
                 <CustomInput name='email' placeholder="Email" control={control} iconName="email"
                     rules={{ required: '*Email is required', pattern: { value: EMAIL_REGEX, message: 'Enter a correct email' } }} />
 
